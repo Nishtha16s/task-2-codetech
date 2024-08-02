@@ -1,0 +1,62 @@
+class GradeTracker:
+    def __init__(self):
+        self.grades = {}
+
+    def add_grade(self, subject, grade):
+        if subject in self.grades:
+            self.grades[subject].append(grade)
+        else:
+            self.grades[subject] = [grade]
+
+    def calculate_average(self, subject):
+        if subject in self.grades:
+            return sum(self.grades[subject]) / len(self.grades[subject])
+        else:
+            return None
+
+    def calculate_gpa(self):
+        total_sum = 0
+        count = 0
+        for grades in self.grades.values():
+            total_sum += sum(grades)
+            count += len(grades)
+        return total_sum / count if count > 0 else None
+
+    def display_grades(self):
+        print("\nGrade Report:")
+        for subject, grades in self.grades.items():
+            average = self.calculate_average(subject)
+            print(f"{subject}: {grades} (Average: {average:.2f})")
+
+        gpa = self.calculate_gpa()
+        print(f"\nOverall GPA: {gpa:.2f}" if gpa is not None else "No grades recorded.")
+
+def main():
+    tracker = GradeTracker()
+
+    while True:
+        print("\nMenu:")
+        print("1. Add grade")
+        print("2. View grades and GPA")
+        print("3. Exit")
+        
+        choice = input("Enter choice (1/2/3): ")
+
+        if choice == '1':
+            subject = input("Enter subject name: ")
+            grade = float(input(f"Enter grade for {subject}: "))
+            tracker.add_grade(subject, grade)
+            print(f"Grade added for {subject}.")
+
+        elif choice == '2':
+            tracker.display_grades()
+
+        elif choice == '3':
+            print("Exiting the grade tracker. Goodbye!")
+            break
+
+        else:
+            print("Invalid input. Please enter a number between 1 and 3.")
+
+# Run the grade tracker
+main()
