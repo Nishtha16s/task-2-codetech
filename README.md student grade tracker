@@ -1,0 +1,41 @@
+Name: NISHTHA ROY
+Company: CODTECH IT SOLUTIONS
+ID: CT6WTDS298
+Domain: Python programming
+Duration: JULY to AUGUST 2024
+Mentor: Neela Santhosh Kumar
+
+Overview of the Project
+Project: student grade tracker
+The Student Grade Tracker is a command-line application designed to help students or educators track and manage grades for various subjects. The program allows users to input grades for different subjects, calculate the average grade per subject, and compute the overall GPA (Grade Point Average). It provides a simple, interactive interface for managing grades, making it an effective tool for tracking academic performance.
+
+Objective
+The objective of the Student Grade Tracker is to create a straightforward and efficient system for recording, managing, and analyzing student grades. By enabling users to input grades, view subject averages, and calculate an overall GPA, this program aims to help students and educators monitor academic progress and identify areas that may require improvement.
+
+Key Activities
+Grade Entry:
+
+Allow users to input grades for various subjects.
+Automatically store and organize grades under the respective subject names.
+Average Calculation:
+
+Calculate the average grade for each subject based on the grades entered.
+Display the calculated averages alongside the corresponding grades for easy review.
+GPA Calculation:
+
+Compute the overall GPA by averaging all the grades entered across subjects.
+Display the GPA to provide a summary of overall academic performance.
+Grade Report Display:
+
+Provide a summary report of all entered grades, including subject-wise grades, averages, and the overall GPA.
+Offer an interactive menu for users to easily navigate between adding grades, viewing reports, and exiting the application.
+
+
+Technologies Used
+Python: The primary programming language used to develop the application.
+Object-Oriented Programming (OOP):
+Classes and Objects: The GradeTracker class is used to encapsulate all grade-related data and functionality.
+Methods: Functions within the class handle adding grades, calculating averages, and displaying the results.
+Control Structures:
+Loops: A while True: loop is used to keep the application running until the user decides to exit.
+Conditionals: if-elif-else statements are used to handle user input and direct the program flow.
